@@ -50,3 +50,35 @@ const loadingInterval = setInterval(() => {
     }, 5000);
   }
 }, 30);
+
+(function() {
+        emailjs.init("VYEMlwI954TgwDYVM"); // Replace with your EmailJS Public Key
+    })();
+
+    // Form submission handler
+    document.getElementById("newsletterForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const emailInput = document.getElementById("emailInput").value;
+        const message = document.getElementById("message");
+
+        // EmailJS parameters
+        const templateParams = {
+            to_email: emailInput // Dynamic email address
+        };
+
+        // Send email using EmailJS
+        emailjs.send("service_5y2yzyn", "template_hf57r3f", templateParams)
+            .then(function(response) {
+                console.log("SUCCESS!", response.status, response.text);
+                message.textContent = "Subscription successful! Check your email.";
+                message.style.color = "green";
+            }, function(error) {
+                console.error("FAILED...", error);
+                message.textContent = "Failed to subscribe. Please try again.";
+                message.style.color = "red";
+            });
+
+        // Clear the input field
+        document.getElementById("emailInput").value = "";
+    });
