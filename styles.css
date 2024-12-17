@@ -264,7 +264,7 @@ html, body {
     /* Center align the coming-soon container */
     .coming-soon-container {
         height: auto;
-        padding: 20px;
+        padding: 0 20px;
     }
 
     /* Wrapper adjustments */
