@@ -362,4 +362,7 @@ html, body {
         font-size: 24px;
     }
 
+    .uniguide-container img {
+        width: 200px;
+    }
 }
