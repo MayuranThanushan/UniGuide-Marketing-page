@@ -94,7 +94,7 @@ html, body {
     margin: auto 0;
 }
 
-.social-icon {
+.social-links a {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
@@ -209,8 +209,11 @@ html, body {
     }
 }
 
-
 @media (max-width: 1076px) {
+    .coming-soon-container {
+        height: auto;
+    }
+
     .main-wrapper {
         padding: 64px 0;
         display: flex;
@@ -254,4 +257,109 @@ html, body {
     .hero-image {
         margin-top: 40px;
     }
+}
+
+@media (max-width: 767px) {
+
+    /* Center align the coming-soon container */
+    .coming-soon-container {
+        height: auto;
+        padding: 20px;
+    }
+
+    /* Wrapper adjustments */
+    .main-wrapper {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-container {
+        padding: 32px;
+    }
+
+    /* Adjust content grid for single column */
+    .content-grid {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    /* Left column occupies full width */
+    .left-column,
+    .right-column {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        /* Center-align text for better readability */
+    }
+
+    /* Text content spacing */
+    .text-content {
+        margin-top: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .main-heading {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    /* Adjust form input layout */
+    .subscription-form {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .form-input {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .email-input {
+        width: auto;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .submit-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Adjust hero image */
+    .hero-image {
+        margin-top: 20px;
+        width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+    /* Adjust brand logo */
+    .brand-logo {
+        font-size: 28px;
+    }
+
+    /* Social links adjustments */
+    .social-links {
+        gap: 16px;
+    }
+
+    .social-links a {
+        width: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .brand-logo {
+        font-size: 24px;
+    }
+
 }
